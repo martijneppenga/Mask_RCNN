@@ -16,7 +16,6 @@ class DataLoader(Sequence):
         self.image_ids = np.copy(dataset.image_ids)
         np.random.shuffle(self.image_ids)
         self.config = config
-        self.ValidLabels = config.ValidLabels
 
         
     def on_epoch_end(self):
