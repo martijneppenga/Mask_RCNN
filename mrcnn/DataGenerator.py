@@ -6,7 +6,7 @@ Created on Mon Jun 15 15:35:48 2020
 """
 from tensorflow.keras.utils import Sequence
 import numpy as np
-import utils as ut 
+import mrcnn.utils as ut 
 
 
 class DataLoader(Sequence):

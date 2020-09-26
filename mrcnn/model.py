@@ -22,7 +22,8 @@ import tensorflow.keras.backend as K
 import tensorflow.keras.layers as KL
 import tensorflow.python.keras.layers as KE
 import tensorflow.keras.models as KM
-from KerasCustomModel import CustomModel
+from mrcnn.KerasCustomModel import CustomModel
+from mrcnn.DataGenerator import DataLoader
 
 from mrcnn  import utils
 
@@ -1824,7 +1825,7 @@ class MaskRCNN():
         #                                  no_augmentation_sources=no_augmentation_sources)
         # val_generator = data_generator(val_dataset, self.config, shuffle=True,
         #                                batch_size=self.config.BATCH_SIZE)
-        from DataGenerator import DataLoader 
+         
         train_generator = DataLoader(self.config, train_dataset)
         val_generator   = DataLoader(self.config, val_dataset)
 
